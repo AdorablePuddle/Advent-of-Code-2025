@@ -1,0 +1,4 @@
+input.txt
+*.exe
+main.cpp
+.vscode/*
