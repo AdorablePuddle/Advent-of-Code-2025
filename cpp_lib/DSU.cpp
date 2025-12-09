@@ -26,15 +26,13 @@ int DSU::setSize(int a) {
 void DSU::unify(int a, int b) {
     int pa = this->parent(a);
     int pb = this->parent(b);
-    int sa = this->setSize(pa);
-    int sb = this->setSize(pb);
 
     if (pa == pb) return;
-    if (pa < pb) {
+    if (this->union_size[pa] > this->union_size[pb]) {
         this->par[pb] = pa;
-        this->union_size[pa] = sa + sb;
+        this->union_size[pa] += this->union_size[pb];
     } else {
         this->par[pa] = pb;
-        this->union_size[pb] = sa + sb;
+        this->union_size[pb] += this->union_size[pa];
     }
 }
