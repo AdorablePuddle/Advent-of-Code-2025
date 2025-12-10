@@ -28,7 +28,7 @@ pii input_formatter(string input) {
 }
 
 int64 area(pii a, pii b) {
-    return llabs(a.first - b.first + 1) * llabs(a.second - b.second + 1);
+    return (llabs(a.first - b.first) + 1) * (llabs(a.second - b.second) + 1);
 }
 
 int main(){
