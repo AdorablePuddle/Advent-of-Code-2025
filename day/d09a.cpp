@@ -1,6 +1,3 @@
-#include <chrono>
-#include <iomanip>
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -32,7 +29,6 @@ int64 area(pii a, pii b) {
 }
 
 int main(){
-    auto start = chrono::high_resolution_clock::now();
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     // Solution Here:
@@ -50,9 +46,4 @@ int main(){
         }
     }
     cout << ans;
-
-    // End of solution.
-    auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
-    cerr << "Solution time: " << fixed << setprecision(3) << (float)duration.count() / 1000 << "s\n";
 }
